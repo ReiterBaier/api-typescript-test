@@ -1,22 +1,18 @@
-const datasource = require('typeorm')
 const path = require('path')
+const datasource = require('typeorm')
 
-
-export const AppDatasource = new datasource.DataSource({
-    type: 'postgres',
-    database: 'openproject',
-    host: '172.20.10.210',
-    port: 5432,
-    username: 'openproject',
-    password: 'openproject'
+module.exports = AppDatasource = new datasource.DataSource({
+    type: 'mariadb',
+    database: 'fsis_cep',
+    host: 'fsis-db.cn30ieaycffi.us-east-1.rds.amazonaws.com',
+    port: 9630,
+    username: 'admin',
+    password: 'dY&^3ODl^wolj!Jt3YiT'
 })
 
-
-export const connect = async() => {
+module.exports =  connect  = async() => {
     await AppDatasource.initialize().then(() => {   
         console.log('Datasource initialized')
     })
 }
 
-
-export default AppDatasource

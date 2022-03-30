@@ -1,11 +1,11 @@
-const express = require('express')
-const connect = require('./database/databaseConnect.js')
+const path = require('path')
+const app = require('express')
+const connect = require('./database/databaseConnect')
 
 
-export default server = async () => {
-    console.log('-----------------------------------------------START------------------------------------------------')
-  
-    await connect()
+module.exports =  server = async () => {
+  await connect()
+  console.log('Start connection with database')
+  return app()
+}
 
-  }
-  
