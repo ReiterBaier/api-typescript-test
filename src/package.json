@@ -1,0 +1,17 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Reiter Baier",
+  "license": "ISC",
+  "description": "Essa API tem como objetivo facilitar os integradores no cadastro de ceps e municípios em suas integrações.",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql": "^2.18.1",
+    "pg": "^8.7.3",
+    "typeorm": "^0.3.4"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
