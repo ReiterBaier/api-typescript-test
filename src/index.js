@@ -1,4 +1,4 @@
-const path = require('path')
+import path from 'path'
 const server = require('./server')
 const express = require('express')
 const app = express()
