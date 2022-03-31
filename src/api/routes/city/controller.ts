@@ -1,16 +1,12 @@
-import { JsonController, Get, Param, Body, Header, HttpCode } from 'routing-controllers'
+import { JsonController, Get, Param, Body, Header, HttpCode, OnUndefined } from 'routing-controllers'
+import { findOne } from './service'
 
 @JsonController('/city')
 export class CityController {
-  @Get('')
-  @HttpCode(200)
-  getAll() {
-    return 'Quer os dados da cidade? passe o código IBGE como url path!'
-  }
-
   @Get('/:ibge')
   @HttpCode(200)
-  getOne(@Param('ibge') ibge: number) {
-    return ibge
+  @OnUndefined(500)
+  getOne(@Param('ibge') ibge: ibge) {
+    return findOne(ibge)
   }
 }

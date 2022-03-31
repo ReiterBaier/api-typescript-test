@@ -24,6 +24,7 @@
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
+    "typeorm-routing-controllers-extensions": "^0.2.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
