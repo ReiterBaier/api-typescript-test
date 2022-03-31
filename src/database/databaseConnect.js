@@ -14,5 +14,9 @@ module.exports =  connect  = async() => {
     await AppDatasource.initialize().then(() => {   
         console.log('Datasource initialized')
     })
+
 }
+
+
+
 
