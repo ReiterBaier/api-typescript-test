@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Api para testar funcionalidades do backend",
   "main": "index.js",
-  "repository": "https://github.com/rafael-desouza/api-back-end.git",
-  "author": "Rafael Ferreira de Souza <rafael.souza@sisplansistemas.com.br>",
+  "repository": "https://github.com/ReiterBaier/fsis.cep.git",
+  "author": "Reiter Baier<joao.victor@sisplansistemas.com.br>",
   "license": "MIT",
   "scripts": {
     "dev": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./src/index.ts",
