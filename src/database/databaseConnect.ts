@@ -2,7 +2,7 @@ import path from 'path'
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
 
-const entitiesPath =  path.resolve(__dirname, '..', 'entities', '*')
+const entitiesPath = path.resolve(__dirname, '..', 'entities', '*')
 
 export const AppDatasource = new DataSource({
   type: 'mariadb',

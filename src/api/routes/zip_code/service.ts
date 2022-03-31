@@ -1,5 +1,5 @@
-import { AppDatasource } from 'src/database/databaseConnect'
-import { Zip_code } from 'src/entities/zip_code'
+import { AppDatasource } from '../../../database/databaseConnect'
+import { Zip_code } from '../../../entities/zip_code'
 import { FindOneOptions } from 'typeorm'
 
 export const findAll = async () => {

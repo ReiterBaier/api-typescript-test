@@ -6,7 +6,7 @@ export class CityController {
   @Get('/:ibge')
   @HttpCode(200)
   @OnUndefined(500)
-  getOne(@Param('ibge') ibge: ibge) {
+  getOne(@Param('ibge') ibge: number) {
     return findOne(ibge)
   }
 }

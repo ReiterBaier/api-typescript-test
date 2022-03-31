@@ -11,7 +11,10 @@
     "test": "set NODE_ENV=test&& jest --i --no-cache --verbose --runInBand --bail",
     "typeorm": "ts-node-dev  node_modules/typeorm/cli.js",
     "build:babel": "set BABEL_ENV=build&& set NODE_ENV=production&& babel src --extensions \".ts\" --out-dir ./fsis/dist --source-maps --copy-files --no-copy-ignored --delete-dir-on-start --no-comments",
-    "install_service": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./service.ts"
+    "install_service": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./service.ts",
+    "build": "yarn build:clean&&yarn build:dist",
+    "build:clean": "rimraf ./dist",
+    "build:dist": "tsc --build tsconfig.build.json"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,6 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "module-alias": "^2.2.2",
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
     "node-windows": "^1.0.0-beta.7",
@@ -42,6 +46,7 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.3",
+    "@types/module-alias": "^2.0.1",
     "@types/multer": "^1.4.7",
     "@types/node": "^16.11.10",
     "@types/node-windows": "^0.1.2",

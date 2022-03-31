@@ -1,7 +1,7 @@
 import { Express } from 'express'
 import { createExpressServer, RoutingControllersOptions } from 'routing-controllers'
 import path from 'path'
-import { connect } from 'src/database/databaseConnect'
+import { connect } from './database/databaseConnect'
 
 const controllerPath = path.resolve(__dirname, 'api', 'routes', '**', 'controller.*')
 

@@ -6,7 +6,7 @@ export class CityController {
   @Get('/:zip')
   @HttpCode(200)
   @OnUndefined(500)
-  getOne(@Param('zip') zip: zip) {
+  getOne(@Param('zip') zip: number) {
     return findOne(zip)
   }
 }
