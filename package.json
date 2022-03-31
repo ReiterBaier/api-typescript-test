@@ -1,7 +1,7 @@
 {
   "name": "fsis-cep",
   "version": "1.0.0",
-  "description": "API para consumo de dados de CEP e CIDADE",
+  "description": "API para consumo de dados referente a cadastros de CEP e cadastros de CIDADE",
   "main": "index.js",
   "repository": "https://github.com/ReiterBaier/fsis.cep.git",
   "author": "Reiter Baier<joao.victor@sisplansistemas.com.br>",
@@ -10,7 +10,8 @@
     "dev": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./src/index.ts",
     "test": "set NODE_ENV=test&& jest --i --no-cache --verbose --runInBand --bail",
     "typeorm": "ts-node-dev  node_modules/typeorm/cli.js",
-    "build:babel": "set BABEL_ENV=build&& set NODE_ENV=production&& babel src --extensions \".ts\" --out-dir ./fsis/dist --source-maps --copy-files --no-copy-ignored --delete-dir-on-start --no-comments"
+    "build:babel": "set BABEL_ENV=build&& set NODE_ENV=production&& babel src --extensions \".ts\" --out-dir ./fsis/dist --source-maps --copy-files --no-copy-ignored --delete-dir-on-start --no-comments",
+    "install_service": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./service.ts"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -21,6 +22,7 @@
     "express": "^4.17.1",
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
+    "node-windows": "^1.0.0-beta.7",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
@@ -42,6 +44,7 @@
     "@types/jest": "^27.0.3",
     "@types/multer": "^1.4.7",
     "@types/node": "^16.11.10",
+    "@types/node-windows": "^0.1.2",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
