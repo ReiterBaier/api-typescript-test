@@ -1,7 +1,7 @@
 {
-  "name": "fsis-dashboard",
+  "name": "fsis-cep",
   "version": "1.0.0",
-  "description": "Api para testar funcionalidades do backend",
+  "description": "API para consumo de dados de CEP e CIDADE",
   "main": "index.js",
   "repository": "https://github.com/ReiterBaier/fsis.cep.git",
   "author": "Reiter Baier<joao.victor@sisplansistemas.com.br>",

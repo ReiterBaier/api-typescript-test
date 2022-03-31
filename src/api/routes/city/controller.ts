@@ -1,14 +1,16 @@
-import { JsonController, Get, Param, Body, Header } from 'routing-controllers'
+import { JsonController, Get, Param, Body, Header, HttpCode } from 'routing-controllers'
 
 @JsonController('/city')
 export class CityController {
   @Get('')
+  @HttpCode(200)
   getAll() {
-    return 'sopinha'
+    return 'Quer os dados da cidade? passe o código IBGE como url path!'
   }
 
-  @Get('/:id')
-  getOne(@Param('id') id: number) {
-    return id
+  @Get('/:ibge')
+  @HttpCode(200)
+  getOne(@Param('ibge') ibge: number) {
+    return ibge
   }
 }
