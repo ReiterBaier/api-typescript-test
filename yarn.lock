@@ -9,11 +9,6 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@author.io/arg@1.3.22":
-  version "1.3.22"
-  resolved "https://registry.npmjs.org/@author.io/arg/-/arg-1.3.22.tgz"
-  integrity sha512-P8Ov8N4LzVZDwvSjFu+eJVNbEqfIWcXMy7rARG1KNnII8+XSHXnR1JVJfUDgEnJNPPys1w0lV8kN4RPj9xhDHA==
-
 "@babel/cli@^7.14.8":
   version "7.17.6"
   resolved "https://registry.npmjs.org/@babel/cli/-/cli-7.17.6.tgz"
@@ -4445,6 +4440,11 @@ minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
+minimist@~0.0.1:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
+  integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
+
 mkdirp@^0.5.1, mkdirp@^0.5.4:
   version "0.5.6"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz"
@@ -4552,13 +4552,13 @@ node-releases@^2.0.2:
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.2.tgz"
   integrity sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg==
 
-node-windows@^1.0.0-beta.7:
-  version "1.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/node-windows/-/node-windows-1.0.0-beta.7.tgz#b786eee9db9dcaaf6c58d524c564bfb687beabfa"
-  integrity sha512-JnsGjdNmZ9oQZXXUoC7psAFQcyJaMa7cwrfNX+CbZNuPvP3fczVXT5uIO4n56v7jY2814XEtWulYabJUAgbcNA==
+node-windows@1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/node-windows/-/node-windows-1.0.0-beta.5.tgz#f79288b1ca6f1f41a6d31229902c611a21abb9d6"
+  integrity sha512-yaAnzX4lSBrg/u70pXLWBLaCFG5CRmvbfWCOc88ScDOzKC675BB/g69x0JgtdaQkOujlyAX9VJ+DA08/ToLhyw==
   dependencies:
-    "@author.io/arg" "1.3.22"
-    xml "1.0.1"
+    optimist "~0.6.0"
+    xml "0.0.12"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -4660,6 +4660,14 @@ only@~0.0.2:
   version "0.0.2"
   resolved "https://registry.npmjs.org/only/-/only-0.0.2.tgz"
   integrity sha1-Kv3oTQPlC5qO3EROMGEKcCle37Q=
+
+optimist@~0.6.0:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
+  integrity sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
+  dependencies:
+    minimist "~0.0.1"
+    wordwrap "~0.0.2"
 
 optionator@^0.8.1:
   version "0.8.3"
@@ -6077,6 +6085,11 @@ word-wrap@^1.2.3, word-wrap@~1.2.3:
   resolved "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.3.tgz"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
 
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
+
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
@@ -6119,10 +6132,10 @@ xml2js@^0.4.23:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
 
-xml@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/xml/-/xml-1.0.1.tgz"
-  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
+xml@0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/xml/-/xml-0.0.12.tgz#f08b347109912be00285785f46f15ad8e50a5f67"
+  integrity sha1-8Is0cQmRK+AChXhfRvFa2OUKX2c=
 
 xmlbuilder@~11.0.0:
   version "11.0.1"
