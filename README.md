@@ -1,4 +1,4 @@
-# busque-cep API REST
+# busca-cep API REST
  
  API composta por duas rotas:
 [IP]:[PORTA]/zip_code/${codigoCep}
