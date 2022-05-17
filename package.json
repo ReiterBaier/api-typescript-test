@@ -1,5 +1,5 @@
 {
-  "name": "fsis-cep",
+  "name": "busca-cep",
   "version": "1.0.0",
   "description": "API para consumo de dados referente a cadastros de CEP e cadastros de CIDADE",
   "main": "index.js",
