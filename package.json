@@ -4,7 +4,7 @@
   "description": "API para consumo de dados referente a cadastros de CEP e cadastros de CIDADE",
   "main": "index.js",
   "repository": "https://github.com/ReiterBaier/fsis.cep.git",
-  "author": "Reiter Baier<joao.victor@sisplansistemas.com.br>",
+  "author": "Reiter Baier<joao.reiter@outlook.com>",
   "license": "MIT",
   "scripts": {
     "dev": "set NODE_ENV=development&& tsnd -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify ./src/index.ts",
