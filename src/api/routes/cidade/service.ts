@@ -1,5 +1,5 @@
 import { AppDatasource } from '../../../database/databaseConnect'
-import { City } from '../../../entities/city'
+import { City } from '../../../entities/cidade'
 import { FindOneOptions } from 'typeorm'
 
 export const findAll = async () => {

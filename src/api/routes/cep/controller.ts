@@ -1,12 +1,12 @@
 import { JsonController, Get, Param, Body, Header, HttpCode, OnUndefined } from 'routing-controllers'
 import { findOne } from './service'
 
-@JsonController('/zip_code')
+@JsonController('/cep')
 export class CityController {
-  @Get('/:zip')
+  @Get('/:cep')
   @HttpCode(200)
   @OnUndefined(500)
-  getOne(@Param('zip') zip: number) {
-    return findOne(zip)
+  getOne(@Param('cep') cep: number) {
+    return findOne(cep)
   }
 }
