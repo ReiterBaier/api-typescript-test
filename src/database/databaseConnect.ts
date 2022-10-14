@@ -6,11 +6,11 @@ const entitiesPath = path.resolve(__dirname, '..', 'entities', '*')
 
 export const AppDatasource = new DataSource({
   type: 'mariadb',
-  database: 'teste',
-  host: 'teste',
-  port: 0,
-  username: 'teste',
-  password: 'teste',
+  database: 'fsis_cep',
+  host: 'fsis-db-master.cn30ieaycffi.us-east-1.rds.amazonaws.com',
+  port: 9631,
+  username: 'admin',
+  password: 'dY&^3ODl^glej!Ot6YiK',
   entities: [entitiesPath]
 })
 
