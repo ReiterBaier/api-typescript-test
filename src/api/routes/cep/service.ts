@@ -2,12 +2,15 @@ import { AppDatasource } from '../../../database/databaseConnect'
 import { Cep } from '../../../entities/cep'
 import { FindOneOptions } from 'typeorm'
 
-export const findAll = async () => {
-  return await AppDatasource.manager.find(Cep)
-}
+export const findOne = async (cep: number) => {
+  const param: FindOneOptions = {
+    where: { cep: cep },
+    relations: ['bairro', 'bairro.cidade', 'bairro.cidade.uf', 'bairro.cidade.uf.pais']
+  }
 
-export const findOne = async (id: number) => {
-  const param: FindOneOptions = { where: { cep: id } }
+  const getOneCep = await AppDatasource.getRepository(Cep).manager.findOne(Cep, param)
 
-  return await AppDatasource.manager.findOne<Cep>(Cep, param)
+  console.log(getOneCep)
+
+  return getOneCep
 }

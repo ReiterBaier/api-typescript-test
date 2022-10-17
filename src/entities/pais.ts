@@ -3,8 +3,8 @@ import { Uf } from './uf'
 
 @Entity('pais')
 export class Pais {
-  @PrimaryColumn()
-  paisId: number
+  @PrimaryColumn({ name: 'paisId', select: false })
+  id: number
 
   @Column()
   nome: string

@@ -2,16 +2,15 @@ import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn, Unique } from 'ty
 import { Pais } from './pais'
 
 @Entity('uf')
-@Unique('uf_decorator', ['nome', 'uf'])
 export class Uf {
-  @PrimaryColumn()
-  ufId: number
+  @PrimaryColumn({ name: 'ufId', select: false })
+  id: number
 
   @Column()
   nome: string
 
-  @Column()
-  uf: string
+  @Column({ name: 'uf' })
+  sigla: string
 
   @ManyToOne(() => Pais, pais => pais.uf, {
     nullable: false

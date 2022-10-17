@@ -1,13 +1,20 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm'
+import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn } from 'typeorm'
+import { Uf } from './uf'
 
-@Entity('CITY')
-export class City {
-  @PrimaryColumn()
-  ibge: number
-
-  @Column()
-  uf: string
+@Entity('cidade')
+export class Cidade {
+  @PrimaryColumn({ name: 'cidadeId', select: false })
+  id: number
 
   @Column()
   nome: string
+
+  @Column()
+  cod_ibge: number
+
+  @ManyToOne(() => Uf, uf => uf.pais, {
+    nullable: false
+  })
+  @JoinColumn({ name: 'ufId' })
+  uf: Uf
 }

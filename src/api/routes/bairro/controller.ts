@@ -1,12 +1,12 @@
 import { JsonController, Get, Param, HttpCode, OnUndefined } from 'routing-controllers'
 import { findOne } from './service'
 
-@JsonController('/cep')
-export class CepController {
-  @Get('/:cep')
+@JsonController('/bairro')
+export class BairroController {
+  @Get('/:id')
   @HttpCode(200)
   @OnUndefined(500)
-  getOne(@Param('cep') cep: number) {
-    return findOne(cep)
+  getOne(@Param('id') id: number) {
+    return findOne(id)
   }
 }

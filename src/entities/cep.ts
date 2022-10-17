@@ -1,16 +1,20 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm'
+import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn } from 'typeorm'
+import { Bairro } from './bairro'
 
 @Entity('cidadelogradouro')
 export class Cep {
-  @PrimaryColumn()
-  cidadelogradouroId: number
-
-  @Column()
-  cidadebairroId: number
+  @PrimaryColumn({ name: 'cidadelogradouroId' })
+  id: number
 
   @Column()
   cep: number
 
-  @Column()
-  nome: string
+  @Column({ name: 'nome' })
+  logradouro: string
+
+  @ManyToOne(() => Bairro, bairro => bairro.cidade, {
+    nullable: false
+  })
+  @JoinColumn({ name: 'cidadebairroId' })
+  bairro: Bairro
 }
