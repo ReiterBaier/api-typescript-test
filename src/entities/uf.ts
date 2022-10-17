@@ -1,7 +1,8 @@
-import { Entity, Column, PrimaryColumn, JoinColumn, OneToMany, ManyToMany, ManyToOne } from 'typeorm'
+import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn, Unique } from 'typeorm'
 import { Pais } from './pais'
 
 @Entity('uf')
+@Unique('uf_decorator', ['nome', 'uf'])
 export class Uf {
   @PrimaryColumn()
   ufId: number
@@ -12,7 +13,9 @@ export class Uf {
   @Column()
   uf: string
 
-  @ManyToOne(() => Pais, pais => pais.paisId)
-  @JoinColumn({ name: 'paisId', referencedColumnName: 'paisId' })
-  paisId: Pais
+  @ManyToOne(() => Pais, pais => pais.uf, {
+    nullable: false
+  })
+  @JoinColumn({ name: 'paisId' })
+  pais: Pais
 }

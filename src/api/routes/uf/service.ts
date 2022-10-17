@@ -7,22 +7,14 @@ export const findAll = async () => {
 }
 
 export const findOne = async (ufId: number) => {
-  const param: FindOneOptions = { where: { ufId: ufId } }
+  const param: FindOneOptions = {
+    where: { ufId: ufId },
+    relations: ['pais']
+  }
 
-  const repo = await AppDatasource.getRepository(Uf).createQueryBuilder('Pais').innerJoinAndSelect('Pais.paisId', 'paisId').getMany()
+  const uf = await AppDatasource.getRepository(Uf).manager.findOne(Uf, param)
 
-  const teste2 = await AppDatasource.manager.findOne(Uf, param)
-  console.log(repo)
+  console.log(uf)
 
-  return repo
+  return uf
 }
-
-/*export const findOne = async (ufId: number) => {
-  const param: FindOneOptions = { where: { ufId: ufId } }
-
-  const teste = await AppDatasource.manager.findOne(Uf, param)
-  console.log(teste)
-
-  return teste
-}
-*/

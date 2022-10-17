@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryColumn, OneToMany, OneToOne, ManyToOne, ManyToMany } from 'typeorm'
+import { Entity, Column, PrimaryColumn, OneToMany } from 'typeorm'
 import { Uf } from './uf'
 
 @Entity('pais')
@@ -8,4 +8,9 @@ export class Pais {
 
   @Column()
   nome: string
+
+  @OneToMany(() => Uf, uf => uf.pais, {
+    nullable: true
+  })
+  uf: Uf[]
 }
