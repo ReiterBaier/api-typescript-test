@@ -10,7 +10,5 @@ export const findOne = async (cep: number) => {
 
   const getOneCep = await AppDatasource.getRepository(Cep).manager.findOne(Cep, param)
 
-  console.log(getOneCep)
-
   return getOneCep
 }
